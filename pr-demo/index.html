@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nescafé Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid p-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-2 sidebar">
+                <h4 class="mb-4 text-warning fw-bold">☕ Nescafé</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="#" class="nav-link active"><i class="bi bi-house-door"></i> Dashboard</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-cup-hot"></i> Coffee Menu</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-pencil"></i> Feedback</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-envelope"></i> Messages</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-clock"></i> Order History</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-credit-card"></i> Payment</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-gear"></i> Settings</a></li>
+                    <li class="nav-item mt-4"><a href="#" class="nav-link text-danger"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Section -->
+            <div class="col-lg-7 main-content">
+                <div class="d-flex align-items-center mb-3">
+                    <input type="text" id="search" class="form-control w-50" placeholder="Search coffee">
+                    <button class="btn btn-warning ms-2">Filter</button>
+                    <button id="toggle-cart-btn" class="btn btn-info ms-2">Toggle Cart</button>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-outline-secondary category-btn">Espresso</button>
+                    <button class="btn btn-outline-secondary category-btn">Latte</button>
+                    <button class="btn btn-outline-secondary category-btn">Cappuccino</button>
+                    <button class="btn btn-outline-secondary category-btn">Mocha</button>
+                    <button class="btn btn-outline-secondary category-btn">Macchiato</button>
+                </div>
+
+                <h5 class="mb-3">Popular</h5>
+                <div class="row g-3" id="product-list">
+                    <div class="col-md-4 product-card" data-name="Espresso" data-price="5">
+                        <div class="card p-2 text-center">
+                            <div class="category-img">
+                                <img src="img/espresso.jpg" alt="Espresso">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="fw-bold">Espresso</h6>
+                                <p class="text-muted">$5</p>
+                                <button class="btn btn-outline-primary btn-sm w-100 mb-1">Wishlist</button>
+                                <button class="btn btn-order btn-sm w-100 add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 product-card" data-name="Latte" data-price="6">
+                        <div class="card p-2 text-center">
+                            <div class="category-img">
+                                <img src="img/latte.jpg" alt="Latte">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="fw-bold">Latte</h6>
+                                <p class="text-muted">$6</p>
+                                <button class="btn btn-outline-primary btn-sm w-100 mb-1">Wishlist</button>
+                                <button class="btn btn-order btn-sm w-100 add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 product-card" data-name="Cappuccino" data-price="6">
+                        <div class="card p-2 text-center">
+                            <div class="category-img">
+                                <img src="img/cappuccino.jpg" alt="Cappuccino">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="fw-bold">Cappuccino</h6>
+                                <p class="text-muted">$6</p>
+                                <button class="btn btn-outline-primary btn-sm w-100 mb-1">Wishlist</button>
+                                <button class="btn btn-order btn-sm w-100 add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Section -->
+            <div class="cart-section">
+                <h5 class="mb-3 fw-bold">Your Cart</h5>
+                <div id="cart-items"></div>
+                <div class="fw-bold mt-3" id="cart-total">Total: $0</div>
+                <button class="btn btn-success w-100 mt-3" id="buy-now-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
